@@ -10,6 +10,7 @@ import homeRoutes from './routes/home.routes'
 import bannerRoutes from './routes/banner.routes'
 import metaRoutes from './routes/meta.routes'
 import solutionHighlightsRoutes from './routes/solutionHighlights.routes'
+import contactRoutes from './routes/contact.routes'
 import { errorHandler } from './middlewares/errorHandler'
 dotenv.config()
 
@@ -33,6 +34,7 @@ app.use('/api/homepage', homeRoutes)
 app.use('/api/menus', menuRoutes)
 app.use('/api/banner', bannerRoutes)
 app.use('/api/solution-highlights', solutionHighlightsRoutes)
+app.use('/api/contact', contactRoutes)
 
 // Health check
 app.get('/', (_req, res: any) => res.send('API is running 🚀'))
